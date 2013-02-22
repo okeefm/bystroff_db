@@ -1,0 +1,12 @@
+<!--#include virtual="header.shtml" -->
+
+<div class="container">
+
+  	<h2>Edit or Delete</h2>
+ 	<div class="well">
+  		
+	</div>
+
+</div> <!-- /container -->
+
+<!--#include virtual="footer.shtml" -->
