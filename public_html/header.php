@@ -79,7 +79,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
 
   </head>
 
@@ -96,9 +96,9 @@
           <a class="brand" href=".">Bystroff Lab Database</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="index.shtml">Home</a></li>
-              <li><a href="new_sample.shtml">New Sample</a></li>
-              <li><a href="locations_main.shtml">Edit Locations</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="new_sample.php">New Sample</a></li>
+              <li><a href="locations_main.php">Edit Locations</a></li>
             </ul>
           </div><!--/.nav-collapse -->
 
@@ -107,7 +107,7 @@
               <input type="text" class="search-query" placeholder="Quick Search" />
             </form>
             <ul class="nav">
-              <li><a href="advanced_search.shtml">Advanced Search</a></li>
+              <li><a href="advanced_search.php">Advanced Search</a></li>
             </ul>
           </div>
         </div>
