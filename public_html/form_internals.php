@@ -13,7 +13,7 @@
 			<option value="3C07">3C07</option>
 			<option value="3W01">3W01</option>
 		</select>
-		<span class="help-block">Room the sample is in </span>
+		<span class="help-block">Room the sample is in</span>
 	</div>
 </div>
 
