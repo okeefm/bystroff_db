@@ -1,4 +1,4 @@
-<!--#include virtual="header.shtml" -->
+<?php include "header.php"; ?>
 
 <div class="container">
 
@@ -60,6 +60,6 @@
 	<input class="btn simplemodal-close" type="submit" value="Cancel" id="editCancel" />
 </div>
 
-<!--#include virtual="footer.shtml" -->
+<?php include "footer.php"; ?>
 
 <script src="assets/js/edit_locations.js"></script>

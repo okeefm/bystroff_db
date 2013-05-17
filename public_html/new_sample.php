@@ -1,4 +1,4 @@
-<!--#include virtual="header.shtml" -->
+<?php include "header.php"; ?>
 
 <div class="container">
 
@@ -6,7 +6,7 @@
 	<div class="well">
 		<form class="form-horizontal" target="search_db" method="POST">
 
-			<!--#include virtual="form_internals.shtml" -->
+			<?php include "form_internals.php"; ?>
 			<input class="btn" type="submit" name="submitAdd" value="Add" /> &nbsp;
 			<input class="btn" type='submit' name="reset" id="reset" value="Reset" />
 		</form>
@@ -21,4 +21,4 @@ $(document).ready(function() {
 });
 </script>
 
-<!--#include virtual="footer.shtml" -->
+<?php include "footer.php"; ?>

@@ -1,12 +1,12 @@
-<!--#include virtual="header.shtml" -->
+<?php include "header.php"; ?>
 
 <div class="container">
 
   	<h2>Search</h2>
  	<div class="well">
-  		<!--#include virtual="search.shtml" -->
+  		<?php include "search.php"; ?>
 	</div>
 
 </div> <!-- /container -->
 
-<!--#include virtual="footer.shtml" -->
+<?php include "footer.php"; ?>

@@ -1,4 +1,4 @@
-<!--#include virtual="header.shtml" -->
+<?php include "header.php"; ?>
 
 <div class="container">
 
@@ -11,4 +11,4 @@
 
 </div> <!-- /container -->
 
-<!--#include virtual="footer.shtml" -->
+<?php include "footer.php"; ?>
