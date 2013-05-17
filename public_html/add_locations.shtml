@@ -76,6 +76,7 @@
 				<div class="controls">
 					<input type="text" placeholder="okeefm.1" name="newBox" id="newBox" />
 				</div>
+				<span class="help-block">Container within the fridge/freezer that holds samples</span>
 			</div>
 
 			<input class="btn" type="submit" value="Add" id="addBox" name="addBox" />
