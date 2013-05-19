@@ -15,37 +15,16 @@ $(document).ready(function() {
 				
 				$("#editDialog").modal({
 					autoResize:true,
-					overlayClose:true,
-					onOpen: edit.open(option, selectId)
-				});
+					overlayClose:true
+					});
 				
-				$("#editConfirm").click(function(e) {
-					e.preventDefault();
-					if (confirm("Are you sure you want to edit this?")) {
-						console.log("foo");
-						$.post("ajax/update_location.php",
-						{ id: $("#editInput").data("id"), value: $("#editInput").val(), selectId: $("#editInput").data("selectId")},
-						function(data) {
-							console.log(data);
-							if (data == "success") {
-								alert("Item successfully edited.");
-								$("#editCancel").click();
-								location.reload();
-							} else {
-								alert("Update failed!");
-							}
-						});
-					}
-				});
+				$("#editConfirm").data("type", "edit");
+				$("#editInput").val(option.text());
+				$("#editInput").data("id", option.val());
+				$("#editInput").data("selectId", selectId);
+				$("#editTitle").text("Edit");
 			});
 			
-		},
-		
-		//this gets run when the modal is opened, and adds the option text to the text box, and option value as data
-		open: function(option, selectId) {
-			$("#editInput").val(option.text());
-			$("#editInput").data("id", option.val());
-			$("#editInput").data("selectId", selectId);
 		}
 
 	}
@@ -80,8 +59,70 @@ $(document).ready(function() {
 		}
 	}
 	
+	var add = {
+		init: function() {
+			$("input.add").click(function(e) {
+				e.preventDefault();
+				
+				var si = $(this).prev().find("select").attr("id");
+				
+				$("#editDialog").modal({
+					autoResize:true,
+					overlayClose:true
+				});
+				
+				$("#editConfirm").data("type", "add");
+				
+				$("#editInput").data("selectId", si);
+				switch (si) {
+					case "boxes":
+						$("#editInput").data("sublocation", $("#sublocations option:selected").val());
+					case "sublocations":
+						$("#editInput").data("location", $("#locations option:selected").val());
+						break;
+				}
+				$("#editTitle").text("Add");
+				
+			});
+		}
+	}
+	
+	add.init();
 	edit.init();
 	del.init();
+	
+	$("#editConfirm").click(function(e) {
+		e.preventDefault();
+		if ($(this).data("type") == "edit") {
+			if (confirm("Are you sure you want to edit this?")) {
+				$.post("ajax/update_location.php",
+				{ id: $("#editInput").data("id"), value: $("#editInput").val(), selectId: $("#editInput").data("selectId")},
+				function(data) {
+					console.log(data);
+					if (data == "success") {
+						alert("Item successfully edited.");
+						$("#editCancel").click();
+						location.reload();
+					} else {
+						alert("Edit failed!");
+					}
+				});
+			}
+		} else if ($(this).data("type") == "add") {
+			$.post("ajax/add_location.php",
+				{value: $("#editInput").val(), selectId: $("#editInput").data("selectId"), location: $("#editInput").data("location"), sublocation: $("#editInput").data("sublocation")},
+				function(data) {
+					console.log(data);
+					if (data == "success") {
+						alert("Item successfully added.");
+						$("#editCancel").click();
+						location.reload();
+					} else {
+						alert("Add failed!");
+					}
+				});
+		}
+	});
 	
 	$("select").change(function(e) {
 		var nextId = null;

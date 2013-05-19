@@ -110,7 +110,7 @@
 </div> <!-- /container -->
 
 <div id="editDialog" class="modalContent">
-	<h3>Edit</h3> <br />
+	<h3 id="editTitle">Edit</h3> <br />
 	<input type="text" value="" id="editInput" /> <br />
 	<input class="btn" type="submit" value="Submit" name="editConfirm" id="editConfirm" />
 	<input class="btn simplemodal-close" type="submit" value="Cancel" id="editCancel" />
