@@ -1,4 +1,9 @@
 
+<?php
+	//include db settings from .ini file
+	$db = parse_ini_file("config/db.ini");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
