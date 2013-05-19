@@ -5,8 +5,9 @@ $(document).ready(function() {
 			$("input.edit").click(function(e) {
 				e.preventDefault();
 				
-				var selectId = $(this).prev().find("select").attr("id");
-				var option = $(this).prev().find("select option:selected");
+				console.log($(this))
+				var selectId = $(this).prev().prev().find("select").attr("id");
+				var option = $(this).prev().prev().find("select option:selected");
 				if (option.val() == "") {
 					alert("Please select an object to edit");
 					return false;
@@ -54,8 +55,13 @@ $(document).ready(function() {
 			$("input.delete").click(function(e) {
 				e.preventDefault();
 				
-				var si = $(this).prev().prev().find("select").attr("id");
-				var option = $(this).prev().prev().find("select option:selected").val();
+				var si = $(this).prev().prev().prev().find("select").attr("id");
+				var option = $(this).prev().prev().prev().find("select option:selected").val();
+				
+				if (option == "") {
+					alert("Please select an object to delete");
+					return false;
+				}
 				
 				if (confirm("Are you sure you want to delete this?")) {
 					$.post("ajax/delete_location.php",
