@@ -43,7 +43,7 @@
 							echo "<option value='".$row['id']."'>".$row['value']."</option>\n";
 							$row = $res->fetch_assoc();
 						}
-
+						$mysqli->close();
 					?>
 				</select>
 				<span class="help-block">Room the location is in </span>

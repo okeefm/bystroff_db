@@ -25,5 +25,5 @@
 	} else {
 		echo "failure";
 	}
-	
+	$mysqli->close();
 ?>

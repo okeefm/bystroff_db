@@ -22,4 +22,5 @@
 		echo "<option value='".$row['id']."'>".$row['value']."</option>\n";
 		$row = $res->fetch_assoc();
 	}
+	$mysqli->close();
 ?>
