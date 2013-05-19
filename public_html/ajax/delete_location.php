@@ -12,6 +12,9 @@
 		case "boxes":
 			$query = "DELETE FROM boxes WHERE id=?;";
 			break;
+		case "owners":
+			$query = "DELETE FROM owners WHERE id=?;";
+			break;
 		default:
 			die("Not a selectId name");
 	}
@@ -22,4 +25,5 @@
 	} else {
 		echo "failure";
 	}
+	
 ?>

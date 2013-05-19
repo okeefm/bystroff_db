@@ -12,6 +12,9 @@
 		case "boxes":
 			$query = "UPDATE boxes SET value=? WHERE id=?;";
 			break;
+		case "owners":
+			$query = "UPDATE owners SET name=? WHERE id=?;";
+			break;
 		default:
 			die("Not a selectId name");
 	}
@@ -22,4 +25,5 @@
 	} else {
 		echo "failure";
 	}
+	
 ?>
