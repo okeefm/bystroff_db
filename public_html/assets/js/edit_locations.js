@@ -91,7 +91,10 @@ $(document).ready(function() {
 		{ next: nextId, id: $(this).val()},
 		function(data) {
 			$("." + nextId).removeAttr("disabled");
-			
+			if (nextId != "boxes") {
+				$(".boxes").prop("disabled", true);
+				$(".boxes option").replaceWith("<option value='' disabled selected>Select room and location:</option>");
+			}
 		});
 	});
 	
