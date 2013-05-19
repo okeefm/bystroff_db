@@ -4,6 +4,30 @@
 
   	<h2>Edit or Delete</h2>
  	<div class="well">
+		<h3>Edit/delete Owners</h3>
+		<div class="control-group">
+			<label class="control-label" for="locations">Owner</label>
+			<div class="controls">
+				<select name="owners" id="owners">
+					<option value="" disabled selected>Select:</option>
+					<?php
+						$mysqli = new mysqli($db["host"], $db["user"], $db["pass"], $db["name"], $db["port"]);
+						$stmt = $mysqli->prepare("SELECT id, name FROM owners;");
+						$stmt->execute();
+						$res = $stmt->get_result();
+						$row = $res->fetch_assoc();
+						while ($row != null) {
+							echo "<option value='".$row['id']."'>".$row['name']."</option>\n";
+							$row = $res->fetch_assoc();
+						}
+					?>
+				</select>
+				<span class="help-block">Owner of boxes</span>
+			</div>
+		</div>	
+		<input class="btn edit owners" type="submit" value="Edit" id="editOwner" name="editOwner" />
+		<input class="btn delete owners" type="submit" value="Delete" id="deleteOwner" name="deleteOwner"" />
+	
   		<h3>Edit/delete Room</h3>
 		<div class="control-group">
 			<label class="control-label" for="locations">Room</label>
@@ -11,7 +35,6 @@
 				<select name="locations" id="locations">
 					<option value="" disabled selected>Select:</option>
 					<?php
-						$mysqli = new mysqli($db["host"], $db["user"], $db["pass"], $db["name"], $db["port"]);
 						$stmt = $mysqli->prepare("SELECT id, value FROM locations;");
 						$stmt->execute();
 						$res = $stmt->get_result();
@@ -20,13 +43,14 @@
 							echo "<option value='".$row['id']."'>".$row['value']."</option>\n";
 							$row = $res->fetch_assoc();
 						}
+
 					?>
 				</select>
 				<span class="help-block">Room the location is in </span>
 			</div>
 		</div>	
-		<input class="btn edit" type="submit" value="Edit" id="editRoom" name="editRoom" />
-		<input class="btn delete" type="submit" value="Delete" id="deleteRoom" name="deleteRoom"" />
+		<input class="btn edit locations" type="submit" value="Edit" id="editRoom" name="editRoom" />
+		<input class="btn delete locations" type="submit" value="Delete" id="deleteRoom" name="deleteRoom"" />
 		
 		<h3>Edit/delete Location</h3>
 		<div class="control-group">
