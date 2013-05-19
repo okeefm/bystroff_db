@@ -113,7 +113,7 @@
             <ul class="nav">
               <li><a href="index.php">Home</a></li>
               <li><a href="new_sample.php">New Sample</a></li>
-              <li><a href="locations_main.php">Edit Locations</a></li>
+              <li><a href="edit_locations.php">Edit Locations</a></li>
             </ul>
           </div><!--/.nav-collapse -->
 
