@@ -45,4 +45,22 @@ $(document).ready(function() {
 	
 	edit.init();
 	
+	$("select").change(function(e) {
+		var nextId = null;
+		switch ($(this).attr("id")) {
+			case "locations":
+			nextId = "sublocations";
+			break;
+			case "sublocations":
+			nextId = "boxes";
+			break;
+		}
+		$("#" + nextId).load("ajax/location_select.php", 
+		{ next: nextId, id: $(this).val()},
+		function(data) {
+			$("." + nextId).removeAttr("disabled");
+			
+		});
+	});
+	
 });
