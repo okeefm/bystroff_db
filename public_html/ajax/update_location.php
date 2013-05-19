@@ -15,6 +15,9 @@
 		case "owners":
 			$query = "UPDATE owners SET name=? WHERE id=?;";
 			break;
+		case "types":
+			$query = "UPDATE types SET value=? WHERE id=?;";
+			break;
 		default:
 			die("Not a selectId name");
 	}

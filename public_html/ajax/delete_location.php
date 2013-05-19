@@ -15,6 +15,9 @@
 		case "owners":
 			$query = "DELETE FROM owners WHERE id=?;";
 			break;
+		case "types":
+			$query = "DELETE FROM types WHERE id=?;";
+			break;
 		default:
 			die("Not a selectId name");
 	}
