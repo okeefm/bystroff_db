@@ -26,7 +26,7 @@
 			</div>
 		</div>	
 		<input class="btn edit" type="submit" value="Edit" id="editRoom" name="editRoom" />
-		<input class="btn delete" type="submit" value="Delete" id="deleteRoom" name="deleteRoom" onClick="confirm('Are you sure you want to delete this room?');" />
+		<input class="btn delete" type="submit" value="Delete" id="deleteRoom" name="deleteRoom"" />
 		
 		<h3>Edit/delete Location</h3>
 		<div class="control-group">
@@ -39,7 +39,7 @@
 			</div>
 		</div>	
 		<input class="btn edit sublocations" DISABLED type="submit" value="Edit" id="editsublocations" name="editLocation" />
-		<input class="btn delete sublocations" DISABLED type="submit" value="Delete" id="deletesublocations" name="deleteLocation" onClick="confirm('Are you sure you want to delete this location?');" />
+		<input class="btn delete sublocations" DISABLED type="submit" value="Delete" id="deletesublocations" name="deleteLocation"" />
 		
 		<h3>Edit/delete Box</h3>
 		<div class="control-group">
@@ -52,7 +52,7 @@
 			</div>
 		</div>	
 		<input class="btn edit boxes" DISABLED type="submit" value="Edit" id="editbox" name="editBox" />
-		<input class="btn delete boxes" DISABLED type="submit" value="Delete" id="deletebox" name="deleteBox" onClick="confirm('Are you sure you want to delete this box?');" />
+		<input class="btn delete boxes" DISABLED type="submit" value="Delete" id="deletebox" name="deleteBox" />
 	</div>
 
 </div> <!-- /container -->
