@@ -22,7 +22,7 @@
 						}
 					?>
 				</select>
-				<span class="help-block">Owner of boxes</span>
+				<span class="help-block">Owner of samples</span>
 			</div>
 		</div>	
 		<input class="btn edit owners" type="submit" value="Edit" id="editOwner" name="editOwner" />
