@@ -1,0 +1,1 @@
+UPDATE samples INNER JOIN types ON samples.type = types.value SET samples.typeid = types.id

@@ -1,0 +1,1 @@
+DELETE FROM samples WHERE Name_Of_Sample = "" AND owner = "" AND sequence = "" AND comments = ""
