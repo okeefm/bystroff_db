@@ -47,7 +47,7 @@
 </div>
 
 <div class="control-group">
-	<label class="control-label" for="locations">Owner</label>
+	<label class="control-label" for="owners">Owner</label>
 	<div class="controls">
 		<select name="owners" id="owners">
 			<option value="" disabled selected>Select:</option>
