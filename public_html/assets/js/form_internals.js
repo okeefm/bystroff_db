@@ -6,17 +6,6 @@ $(document).ready(function() {
 			endDate: (new Date()).asString()
 		}
 	);
-
-	$("#reset").click(function(e) {
-		e.preventDefault();
-		$("#sampleName").val("");
-		$("#location").val("");
-		$("#sublocation").val("");
-		$("#box").val("");
-		$("#sampleDate").val("");
-		$("#type").val("");
-		$("#sequence").val("");
-	});
 	
 	$("select.loc").change(function(e) {
 		var nextId = null;
@@ -37,6 +26,20 @@ $(document).ready(function() {
 				$(".boxes option").replaceWith("<option value='' disabled selected>Select room and location:</option>");
 			}
 		});
+	});
+	
+	$("#reset").click(function(e) {
+		e.preventDefault();
+		$("#sampleName").val("");
+		$("#locations").val("");
+		$("#sublocations").html("<option value='' disabled selected>Select a room first:</option>");
+		$("#sublocations").prop("disabled", true);
+		$("#boxes").html("<option value='' disabled selected>Select room and location:</option>");
+		$("#boxes").prop("disabled", true);
+		$("#sampleDate").val("");
+		$("#owners").val("");
+		$("#type").val("");
+		$("#sequence").val("");
 	});
 	
  });
