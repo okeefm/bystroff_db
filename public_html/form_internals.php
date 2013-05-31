@@ -12,9 +12,9 @@
 		<option value="" disabled selected>Select:</option>
 		<?php
 			$mysqli = new mysqli($db["host"], $db["user"], $db["pass"], $db["name"], $db["port"]);
-			$stmt = $mysqli->prepare("SELECT id, value FROM locations;");
-			$stmt->execute();
-			$res = $stmt->get_result();
+			$query = "SELECT id, value FROM locations; SELECT id, name FROM owners; SELECT id, value FROM types;";
+			$mysqli->multi_query($query);
+			$res = $mysqli->use_result();
 			$row = $res->fetch_assoc();
 			while ($row != null) {
 				echo "<option value='".$row['id']."'>".$row['value']."</option>\n";
@@ -52,9 +52,8 @@
 		<select name="owners" id="owners">
 			<option value="" disabled selected>Select:</option>
 			<?php
-				$stmt = $mysqli->prepare("SELECT id, name FROM owners;");
-				$stmt->execute();
-				$res = $stmt->get_result();
+				$mysqli->next_result();
+				$res = $mysqli->use_result();
 				$row = $res->fetch_assoc();
 				while ($row != null) {
 					echo "<option value='".$row['id']."'>".$row['name']."</option>\n";
@@ -80,9 +79,8 @@
 	<div class="controls">
 		<select name="type" id="type">
 			<?php
-				$stmt = $mysqli->prepare("SELECT id, value FROM types;");
-				$stmt->execute();
-				$res = $stmt->get_result();
+				$mysqli->next_result();
+				$res = $mysqli->use_result();
 				$row = $res->fetch_assoc();
 				while ($row != null) {
 					echo "<option value='".$row['id']."'>".$row['value']."</option>\n";
