@@ -78,6 +78,7 @@
 	<label class="control-label" for="type">Type</label>
 	<div class="controls">
 		<select name="type" id="type">
+			<option value="" disabled selected>Select:</option>
 			<?php
 				$mysqli->next_result();
 				$res = $mysqli->use_result();
