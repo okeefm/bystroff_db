@@ -1,4 +1,4 @@
-<form class="form-horizontal" target="search_db" id="search_db" method="POST">
+<form class="form-horizontal" action="search_db.php" id="search_db" method="POST">
 
 	<?php include "form_internals.php"; ?>
 	
