@@ -68,7 +68,7 @@
 <div class="control-group">
 	<label class="control-label" for="sampleDate">Date</label>
 	<div class="controls">
-		<input name="sampleDate" id="sampleDate" class="date-pick" placeholder="MM/DD/YYYY">
+		<input name="sampleDate" id="sampleDate" class="date-pick" placeholder="YYYY-MM-DD">
 		<br />
 		<span class="help-block">Date the sample was added to the system.</span>
 	</div>

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	Date.format = 'mm/dd/yyyy';
+	Date.format = 'yyyy-mm-dd';
    	$('.date-pick').datePicker(
 		{
 			startDate: '01/01/2000',

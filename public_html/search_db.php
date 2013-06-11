@@ -100,7 +100,7 @@
 		}
 		
 		if (isset($result["date"])) {
-			echo "<td>".$result["date"]."</td>\n";
+			echo "<td>".date("Y-m-d", strtotime($result["date"]))."</td>\n";
 		} else {
 			echo "<td> </td>\n";
 		}
