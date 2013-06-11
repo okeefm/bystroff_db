@@ -2,7 +2,7 @@ $(document).ready(function() {
 	Date.format = 'yyyy-mm-dd';
    	$('.date-pick').datePicker(
 		{
-			startDate: '01/01/2000',
+			startDate: '2000-01-01',
 			endDate: (new Date()).asString()
 		}
 	);
