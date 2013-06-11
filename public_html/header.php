@@ -17,6 +17,7 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/datePicker.css" rel="stylesheet">
 	<link href="assets/css/edit-dialog.css" rel="stylesheet">
+	<link href="assets/css/jquery.dataTables.css" rel="stylesheet">
 	
 	<!-- Le javascript
     ================================================== -->
@@ -26,6 +27,7 @@
     <script src="assets/js/date.js"></script>
     <script src="assets/js/jquery.datePicker.js"></script>
 	<script src="assets/js/jquery.simplemodal.1.4.4.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
 	<script src="assets/js/bystroff_db.js"></script>
 
     <style>
