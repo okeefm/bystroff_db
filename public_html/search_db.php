@@ -35,11 +35,8 @@
 		$search_request->equals('type_id', $_POST['type']);
 	}
 	if (isset($_POST['sampleDate']) && (strlen($_POST['sampleDate']) > 0)) {
-		$segments = preg_split("/\//", $_POST['sampleDate']);
-		$date_timestamp = mktime(0,0,0, $segments[0], $segments[1], $segments[2]);
+		$date_timestamp = strtotime($_POST['sampleDate']);
 		$date = date("Y-m-d\TH\\\\:i\\\\:s\Z", $date_timestamp);
-		//$date = "1995-12-31T23\:59\:59Z";
-		echo $date;
 		$search_request->equals('date', $date);
 	}
 	if (isset($_POST['sequence']) && (strlen($_POST['sequence']) > 0)) {
