@@ -6,13 +6,16 @@
 	date_default_timezone_set('UTC');
 	
 	//var_dump($_POST);
-	
+
 	$instance_KoSolr = KoSolr::getInstance();
 	$KoSolr_Server_Instance = $instance_KoSolr->getServer();
 	
 	$search_request = $KoSolr_Server_Instance->create_search_request();
 	$search_request->select('*');
 	
+	if(isset($_POST['text']) && (strlen($_POST['text']) > 0)) {
+		$search_request->equals('text', "'".$_POST['text']."'");
+	}
 	if(isset($_POST['sampleName']) && (strlen($_POST['sampleName']) > 0)) {
 		$search_request->equals('Name_of_Sample', $_POST['sampleName']);
 	}

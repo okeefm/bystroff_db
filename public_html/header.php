@@ -120,8 +120,8 @@
           </div><!--/.nav-collapse -->
 
           <div class="nav-collapse pull-right">
-            <form class="navbar-search">
-              <input type="text" class="search-query" placeholder="Quick Search" />
+            <form class="navbar-search" method="POST" action="search_db.php">
+              <input type="text" name="text" class="search-query" placeholder="Quick Search" />
             </form>
             <ul class="nav">
               <li><a href="advanced_search.php">Advanced Search</a></li>
