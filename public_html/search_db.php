@@ -143,8 +143,8 @@
 		}
 		
 		echo "<td>
-			<a class='btn' href='' >Edit</a> <br />
-			<a class='btn' href='' >Delete</a>
+			<a class='btn edit' href='' data-id='".$result['id']."'>Edit</a> <br />
+			<a class='btn delete' href='' data-id='".$result['id']."'>Delete</a>
 		</td>\n</tr>\n";
 	}
 	unset($result);
