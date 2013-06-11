@@ -61,6 +61,7 @@
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
+					<th>Actions</th>
                 </tr>
             </thead>";
 			
@@ -141,7 +142,10 @@
 			echo "<td> </td>\n";
 		}
 		
-		echo "</tr>\n";
+		echo "<td>
+			<a class='btn' href='' >Edit</a> <br />
+			<a class='btn' href='' >Delete</a>
+		</td>\n</tr>\n";
 	}
 	unset($result);
 	
@@ -160,6 +164,7 @@
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
+					<th>Actions</th>
                 </tr>
             </tfoot>";
 			
