@@ -28,11 +28,11 @@ $(document).ready(function() {
 				e.preventDefault();
 				
 				if (confirm("Are you sure you want to delete this sample?")) {
-					$.post("ajax/delete_location.php",
-						{ id: option, selectId: si},
+					$.post("ajax/delete_sample.php",
+						{ id: $(this).data("id") },
 						function(data) {
 							if (data == "success") {
-								alert("Item successfully deleted.");
+								alert("Sample successfully deleted.");
 								location.reload();
 							} else {
 								alert("Delete failed!");
