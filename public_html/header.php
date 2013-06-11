@@ -121,7 +121,7 @@
 
           <div class="nav-collapse pull-right">
             <form class="navbar-search" method="POST" action="search_db.php">
-              <input type="text" name="text" class="search-query" placeholder="Quick Search" />
+              <input type="text" name="text" class="search-query" placeholder="Quick Search" value="<?php if( isset($_POST['text'])) {echo $_POST['text'];}?>" />
             </form>
             <ul class="nav">
               <li><a href="advanced_search.php">Advanced Search</a></li>
