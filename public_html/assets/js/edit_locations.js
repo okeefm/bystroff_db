@@ -4,8 +4,7 @@ $(document).ready(function() {
 		init: function () {
 			$("input.edit").click(function(e) {
 				e.preventDefault();
-				
-				console.log($(this))
+
 				var selectId = $(this).prev().prev().find("select").attr("id");
 				var option = $(this).prev().prev().find("select option:selected");
 				if (option.val() == "") {
