@@ -67,7 +67,7 @@
 	$i = 0;
 	foreach($response->response['docs'] as $result) {
 		echo "<tr class='tableRow'> \n";
-		echo "<td>".$i."</td>";
+		echo "<td>".(++$i)."</td>";
 		
 		if (isset($result["Name_of_Sample"])) {
 			echo "<td>".$result["Name_of_Sample"]."</td>\n";
