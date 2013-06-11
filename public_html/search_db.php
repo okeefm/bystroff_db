@@ -5,7 +5,7 @@
 	// Set the default timezone to use. Available as of PHP 5.1
 	date_default_timezone_set('UTC');
 	
-	//var_dump($_POST);
+	var_dump($_REQUEST);
 
 	$instance_KoSolr = KoSolr::getInstance();
 	$KoSolr_Server_Instance = $instance_KoSolr->getServer();
@@ -13,34 +13,34 @@
 	$search_request = $KoSolr_Server_Instance->create_search_request();
 	$search_request->select('*');
 	
-	if(isset($_POST['text']) && (strlen($_POST['text']) > 0)) {
-		$search_request->equals('text', "'".$_POST['text']."'");
+	if(isset($_REQUEST['text']) && (strlen($_REQUEST['text']) > 0)) {
+		$search_request->equals('text', "'".$_REQUEST['text']."'");
 	}
-	if(isset($_POST['sampleName']) && (strlen($_POST['sampleName']) > 0)) {
-		$search_request->equals('Name_of_Sample', $_POST['sampleName']);
+	if(isset($_REQUEST['sampleName']) && (strlen($_REQUEST['sampleName']) > 0)) {
+		$search_request->equals('Name_of_Sample', $_REQUEST['sampleName']);
 	}
-	if (isset($_POST['locations'])){ 
-		$search_request->equals('location_id', $_POST['locations']);
+	if (isset($_REQUEST['locations'])){ 
+		$search_request->equals('location_id', $_REQUEST['locations']);
 	}
-	if (isset($_POST['sublocations'])){ 
-		$search_request->equals('sublocation_id', $_POST['sublocations']);
+	if (isset($_REQUEST['sublocations'])){ 
+		$search_request->equals('sublocation_id', $_REQUEST['sublocations']);
 	}
-	if (isset($_POST['boxes'])){ 
-		$search_request->equals('box_id', $_POST['boxes']);
+	if (isset($_REQUEST['boxes'])){ 
+		$search_request->equals('box_id', $_REQUEST['boxes']);
 	}
-	if (isset($_POST['owners'])){ 
-		$search_request->equals('owner_id', $_POST['owners']);
+	if (isset($_REQUEST['owners'])){ 
+		$search_request->equals('owner_id', $_REQUEST['owners']);
 	}
-	if (isset($_POST['type'])){ 
-		$search_request->equals('type_id', $_POST['type']);
+	if (isset($_REQUEST['type'])){ 
+		$search_request->equals('type_id', $_REQUEST['type']);
 	}
-	if (isset($_POST['sampleDate']) && (strlen($_POST['sampleDate']) > 0)) {
-		$date_timestamp = strtotime($_POST['sampleDate']);
+	if (isset($_REQUEST['sampleDate']) && (strlen($_REQUEST['sampleDate']) > 0)) {
+		$date_timestamp = strtotime($_REQUEST['sampleDate']);
 		$date = date("Y-m-d\TH\\\\:i\\\\:s\Z", $date_timestamp);
 		$search_request->equals('date', $date);
 	}
-	if (isset($_POST['sequence']) && (strlen($_POST['sequence']) > 0)) {
-		$search_request->equals('sequence', $_POST['sequence']);
+	if (isset($_REQUEST['sequence']) && (strlen($_REQUEST['sequence']) > 0)) {
+		$search_request->equals('sequence', $_REQUEST['sequence']);
 	}
 	
 	$response = $KoSolr_Server_Instance->execute($search_request);
