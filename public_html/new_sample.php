@@ -4,7 +4,7 @@
 
 	<h2>New Sample</h2>
 	<div class="well">
-		<form class="form-horizontal" target="search_db" method="POST">
+		<form class="form-horizontal" action="add_sample.php" method="POST">
 
 			<?php 
 			include "form_internals.php";
