@@ -40,6 +40,10 @@ $(document).ready(function() {
 		$("#owners").val("");
 		$("#type").val("");
 		$("#sequence").val("");
+		$("#comments").val("");
+		$("#concentration").val("");
+		$("#amount").val("");
+		$("#purity").val("");
 	});
 	
  });
