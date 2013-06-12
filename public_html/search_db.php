@@ -60,7 +60,7 @@
                     <th>Date</th>
                     <th>Owner</th>
                     <th>Concentration</th>
-                    <th>Volume</th>
+                    <th>Amount</th>
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
@@ -121,8 +121,8 @@
 			echo "<td> </td>\n";
 		}
 		
-		if (isset($result["volume"])) {
-			echo "<td>".$result["volume"]."</td>\n";
+		if (isset($result["amount"])) {
+			echo "<td>".$result["amount"]."</td>\n";
 		} else {
 			echo "<td> </td>\n";
 		}
@@ -163,7 +163,7 @@
                     <th>Date</th>
                     <th>Owner</th>
                     <th>Concentration</th>
-                    <th>Volume</th>
+                    <th>Amount</th>
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
