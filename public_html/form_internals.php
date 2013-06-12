@@ -95,6 +95,13 @@
 </div>
 
 <div class="control-group">
+	<label class="control-label" for="gi_number">GI Number</label>
+	<div class="controls">
+		<input type="text" placeholder="" name="gi_number" id="gi_number" />
+	</div>
+</div>
+
+<div class="control-group">
 	<label class="control-label" for="sequence">Sequence</label>
 	<div class="controls">
 		<textarea name="sequence" id="sequence"></textarea>
