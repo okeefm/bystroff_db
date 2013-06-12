@@ -6,7 +6,10 @@
 	<div class="well">
 		<form class="form-horizontal" target="search_db" method="POST">
 
-			<?php include "form_internals.php"; ?>
+			<?php 
+			include "form_internals.php";
+			
+			include "new_sample_additions.php"; ?>
 			<input class="btn" type="submit" name="submitAdd" value="Add" /> &nbsp;
 			<input class="btn" type='submit' name="reset" id="reset" value="Reset" />
 		</form>
