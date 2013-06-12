@@ -5,7 +5,7 @@
 	// Set the default timezone to use. Available as of PHP 5.1
 	date_default_timezone_set('UTC');
 	
-	var_dump($_REQUEST);
+	//var_dump($_REQUEST);
 
 	$instance_KoSolr = KoSolr::getInstance();
 	$KoSolr_Server_Instance = $instance_KoSolr->getServer();
@@ -41,6 +41,9 @@
 	}
 	if (isset($_REQUEST['sequence']) && (strlen($_REQUEST['sequence']) > 0)) {
 		$search_request->equals('sequence', $_REQUEST['sequence']);
+	}
+	if (isset($_REQUEST['gi_number']) && (strlen($_REQUEST['gi_number']) > 0)) {
+		$search_request->equals('gi_number', $_REQUEST['gi_number']);
 	}
 	
 	$response = $KoSolr_Server_Instance->execute($search_request);
