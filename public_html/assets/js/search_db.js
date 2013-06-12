@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#results").dataTable();
+	var dataTable = $("#results").dataTable();
 	
 	var edit = {
 		init: function () {
@@ -33,7 +33,8 @@ $(document).ready(function() {
 						function(data) {
 							if (data == "success") {
 								alert("Sample successfully deleted.");
-								location.reload();
+								console.log($("tr").index($(e.target).parents("tr")));
+								dataTable.fnDeleteRow($("tr").index($(e.target).parents("tr")) - 2);
 							} else {
 								alert("Delete failed!");
 							}
