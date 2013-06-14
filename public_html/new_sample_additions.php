@@ -27,3 +27,11 @@
 		<input type="text" name="purity" id="purity" value="<?php if (isset($edit)) echo $edit_row["Purity"]; ?>" />
 	</div>
 </div>
+
+<?php 
+
+if (isset($edit)) {
+	echo "<input type='hidden' name='id' value='".$edit_row['id']."' />";
+}
+
+?>
