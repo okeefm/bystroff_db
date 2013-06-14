@@ -1,27 +1,6 @@
 $(document).ready(function() {
 	var dataTable = $("#results").dataTable();
 	
-	var edit = {
-		init: function () {
-			$("a.edit").click(function(e) {
-				e.preventDefault();
-				
-				$("#editDialog").modal({
-					autoResize:true,
-					overlayClose:true
-					});
-				
-				$("#editConfirm").data("type", "edit");
-				$("#editInput").val(option.text());
-				$("#editInput").data("id", option.val());
-				$("#editInput").data("selectId", selectId);
-				$("#editTitle").text("Edit");
-			});
-			
-		}
-
-	}
-	
 	var del = {
 		init: function() {
 			$("a.delete").click(function(e) {
@@ -45,6 +24,5 @@ $(document).ready(function() {
 		}
 	}
 	
-	edit.init();
 	del.init();
 });
