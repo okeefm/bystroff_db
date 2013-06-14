@@ -17,7 +17,7 @@
 
 	<h2>Edit Sample</h2>
 	<div class="well">
-		<form class="form-horizontal" action="edit_sample.php" method="POST">
+		<form class="form-horizontal" action="update_sample.php" method="POST">
 
 			<?php 
 			include "form_internals.php";
