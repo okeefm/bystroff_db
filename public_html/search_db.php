@@ -64,6 +64,7 @@
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
+					<th>Last Updated</th>
 					<th>Actions</th>
                 </tr>
             </thead>";
@@ -145,6 +146,12 @@
 			echo "<td> </td>\n";
 		}
 		
+		if (isset($result["last_update"])) {
+			echo "<td>".date("Y-m-d H:i:s", strtotime($result["last_update"]))."</td>\n";
+		} else {
+			echo "<td> </td>\n";
+		}
+		
 		echo "<td>
 			<a class='btn edit' href='edit_sample.php?id=".$result['id']."' >Edit</a> <br />
 			<a class='btn delete' href='' data-id='".$result['id']."'>Delete</a>
@@ -167,6 +174,7 @@
                     <th>GI Number</th>
                     <th>Comments</th>
                     <th>Sequence</th>
+					<th>Last updated</th>
 					<th>Actions</th>
                 </tr>
             </tfoot>";
