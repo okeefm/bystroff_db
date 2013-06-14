@@ -24,7 +24,7 @@
 			
 			include "new_sample_additions.php"; ?>
 			<input class="btn" type="submit" name="submitAdd" value="Submit" /> &nbsp;
-			<input class="btn" type='submit' name="reset" id="reset" value="Reset" />
+			<input class="btn" type='submit' name="back" id="back" value="Back" onClick="history.back(); return false;" />
 		</form>
 	</div>
 
