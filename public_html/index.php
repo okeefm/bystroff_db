@@ -4,8 +4,7 @@
 
   	<h2>Search</h2>
  	<div class="well">
-		<?php //include "search.php";
-			phpinfo();?>
+		<?php include "search.php"; ?>
 	</div>
 
 </div> <!-- /container -->
