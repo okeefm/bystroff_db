@@ -1,7 +1,8 @@
+
 <div class="control-group">
 	<label class="control-label" for="sampleName">Sample Name</label>
 	<div class="controls">
-		<input type="text" placeholder="I.E. GFP" name="sampleName" id="sampleName" />
+		<input type="text" placeholder="I.E. GFP" name="sampleName" id="sampleName" value="<?php if (isset($edit)) echo $edit_row["Name_of_Sample"]; ?>" />
 	</div>
 </div>
 
@@ -68,7 +69,7 @@
 <div class="control-group">
 	<label class="control-label" for="sampleDate">Date</label>
 	<div class="controls">
-		<input name="sampleDate" id="sampleDate" class="date-pick" placeholder="YYYY-MM-DD">
+		<input name="sampleDate" id="sampleDate" class="date-pick" value="<?php if (isset($edit)) echo $edit_row["Date"]; ?>" placeholder="YYYY-MM-DD">
 		<br />
 		<span class="help-block">Date the sample was added to the system.</span>
 	</div>
@@ -97,14 +98,14 @@
 <div class="control-group">
 	<label class="control-label" for="gi_number">GI Number</label>
 	<div class="controls">
-		<input type="text" placeholder="" name="gi_number" id="gi_number" />
+		<input type="text" placeholder="GI Number" name="gi_number" id="gi_number" value="<?php if (isset($edit)) echo $edit_row["Gi_number"]; ?>" />
 	</div>
 </div>
 
 <div class="control-group">
 	<label class="control-label" for="sequence">Sequence</label>
 	<div class="controls">
-		<textarea name="sequence" id="sequence"></textarea>
+		<textarea name="sequence" id="sequence"><?php if (isset($edit)) echo $edit_row["Sequence"]; ?></textarea>
 		<span class="help-block">The sequence of the sample.</span>
 	</div>
 </div>
