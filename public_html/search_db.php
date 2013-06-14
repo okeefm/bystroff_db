@@ -146,7 +146,7 @@
 		}
 		
 		echo "<td>
-			<a class='btn edit' href='' data-id='".$result['id']."'>Edit</a> <br />
+			<a class='btn edit' href='edit_sample.php?id=".$result['id']."' >Edit</a> <br />
 			<a class='btn delete' href='' data-id='".$result['id']."'>Delete</a>
 		</td>\n</tr>\n";
 	}
